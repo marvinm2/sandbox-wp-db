@@ -1068,7 +1068,7 @@ jobs:
           ## Copy to _authors
           if [ -d "authors" ]; then
             cp authors/*.md wikipathways.github.io/_authors/.
-            cp author_list.csv wikipathways.github.io/scripts/.
+            cp authors/author_list.csv wikipathways.github.io/scripts/.
           fi
 
           ## Commit, pull and push
