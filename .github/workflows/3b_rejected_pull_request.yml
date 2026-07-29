@@ -17,7 +17,7 @@ jobs:
       - name: Checkout jekyll repo
         uses: actions/checkout@v4
         with:
-          repository: wikipathways/sandbox-wp.gh.io
+          repository: marvinm2/sandbox-wp.gh.io
           path: sandbox-wp.gh.io
           submodules: true
           fetch-depth: 1
