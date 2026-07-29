@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glutathione metabolism" Data-Source="WikiPathways" Version="WP100_r107114" Author="[169.230.77.174, MaintBot, Thomas, AlexanderPico, Andra, Egonw, DeSl, Khanspers]" Last-Modified="20190917141908" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glutathione metabolism" Data-Source="WikiPathways" Version="WP100_r20260729100430" Author="[169.230.77.174, MaintBot, Thomas, AlexanderPico, Andra, Egonw, DeSl, Khanspers]" Last-Modified="20190917141908" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Glutathione is a major antioxidant in all forms of life and an indicator of cellular oxidative stress. Reduction by the GSR enzyme utilizes NADPH as an electron donor. In a reduced form, glutathione is metabolized in multiple ways leading to the biosynthesis of mercapturonate, glutamate, glycine, cysteine and other amino acids.
 
 Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP100 CPTAC Assay Portal]</Comment>
   <Graphics BoardWidth="1225.0" BoardHeight="976.6666666666666" />
+  <DataNode TextLabel="GSR" GraphId="testadd1" Type="GeneProduct">
+    <Graphics CenterX="1105.0" CenterY="946.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2936" />
+  </DataNode>
   <DataNode TextLabel="2.3.1.80" GraphId="a03" Type="GeneProduct">
-    <Graphics CenterX="1045.3333333333333" CenterY="856.3333333333334" Width="55.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="1105.3333333333333" CenterY="886.3333333333334" Width="55.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="2.3.1.80" />
   </DataNode>
-  <DataNode TextLabel="g-L-Glutamyl-L-cysteine" GraphId="a0316" Type="Metabolite">
+  <DataNode TextLabel="gamma-L-Glutamyl-L-cysteine" GraphId="a0316" Type="Metabolite">
     <Graphics CenterX="703.0" CenterY="644.0" Width="132.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="KEGG Compound" ID="C00669" />
   </DataNode>
   <DataNode TextLabel="GGTLA1" GraphId="a4b" Type="GeneProduct" GroupRef="e28d5">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="GGTLA1 | gamma-glutamyltransferase-like activit..." />
     <Graphics CenterX="418.0" CenterY="585.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="Entrez Gene" ID="2687" />
+    <Xref Database="Entrez Gene" ID="2686" />
   </DataNode>
   <DataNode TextLabel="L-Cysteine" GraphId="a50e6" Type="Metabolite">
     <Graphics CenterX="543.0" CenterY="301.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="KEGG Compound" ID="C00097" />
-  </DataNode>
-  <DataNode TextLabel="1.8.4.4" GraphId="a57" Type="GeneProduct" GroupRef="eaf70">
-    <Graphics CenterX="176.66666666666666" CenterY="905.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="Enzyme Nomenclature" ID="1.8.4.4" />
   </DataNode>
   <DataNode TextLabel="GGT1" GraphId="a6d" Type="GeneProduct" GroupRef="e28d5">
     <Comment Source="GenMAPP remarks">(5-L-Glutamyl)-L-amino acid</Comment>
