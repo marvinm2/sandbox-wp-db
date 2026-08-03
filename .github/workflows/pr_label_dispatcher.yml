@@ -1,8 +1,21 @@
 name: PR Label Dispatcher
 
+# `pull_request_target`, not `pull_request`. A pull request from a fork gets a **read-only**
+# GITHUB_TOKEN whatever the repository's default workflow permissions say, so `gh workflow run`
+# — which needs `actions: write` — cannot dispatch anything. Every submission this repository
+# receives through the portal in fork mode is such a pull request, and most of the ones it
+# receives directly already are.
+#
+# Safe here, unlike the usual `pull_request_target` warning: this job checks out nothing and runs
+# no code from the pull request. It reads a label name and a number and dispatches. The "pwn
+# request" hazard comes from checking out fork code and running it, which this never does.
 on:
-  pull_request:
+  pull_request_target:
     types: [labeled]
+
+permissions:
+  actions: write
+  contents: read
 
 jobs:
   dispatch:
@@ -11,9 +24,16 @@ jobs:
       - name: Dispatch based on label
         env:
           GH_TOKEN: ${{ github.token }}
+          # Via env rather than interpolated into the script: a `${{ }}` expression is substituted
+          # into the run block's *text* before bash exists, so a label containing shell
+          # metacharacters would be executed rather than compared. Only collaborators can apply a
+          # label here, so this is hardening rather than a hole — but it is the same substitution
+          # trap that took workflow 3a down on 2026-07-30.
+          LABEL: ${{ github.event.label.name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          label="${{ github.event.label.name }}"
-          pr_number="${{ github.event.pull_request.number }}"
+          label="$LABEL"
+          pr_number="$PR_NUMBER"
           
           case "$label" in
             "accepted")
