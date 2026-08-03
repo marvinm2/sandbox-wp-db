@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Pathway Author="[marvinm2]" Version="WP0001_r20260803102541" xmlns="http://pathvisio.org/GPML/2013a" Name="Short" Organism="Homo sapiens">
+  <Graphics BoardWidth="480.0" BoardHeight="440.0" />
+  <DataNode TextLabel="MysteryGene" Type="GeneProduct" GraphId="a1">
+    <Graphics CenterX="120" CenterY="90" Width="80" Height="24"/>
+    <Xref Database="" ID=""/></DataNode>
+  <DataNode TextLabel="AKT1" Type="GeneProduct" GraphId="b2">
+    <Graphics CenterX="260" CenterY="90" Width="80" Height="24"/>
+    <Xref Database="Ensembl" ID="ENSG00000142208"/></DataNode>
+  <Biopax><bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+    <bp:ID></bp:ID></bp:PublicationXref></Biopax>
+</Pathway>
