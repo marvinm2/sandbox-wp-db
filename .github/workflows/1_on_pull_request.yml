@@ -1180,14 +1180,15 @@ jobs:
     needs: [get-pr,get-gpml,metadata,authors,pubmed,frontmatter,testing] #json-svg add once that step is resolved
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code
-      uses: actions/checkout@v6
-      with:
-        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
-        
+    # No checkout, for the reason given on `get-gpml`: `actions/checkout@v6` refuses to place
+    # a fork's code inside a `pull_request_target` workflow holding this repository's secrets.
+    # This job needed it least of all — it reads job outputs and runs `gh pr edit`, and never
+    # touched the working tree. It was simply the last one anybody looked at.
     - name: Compile and update PR description
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # No checkout means no git remote for `gh` to infer the repository from.
+        GH_REPO: ${{ github.repository }}
         PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
         GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
         STATUS: ${{ needs.get-gpml.outputs.status }}
