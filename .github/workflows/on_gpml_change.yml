@@ -461,8 +461,16 @@ jobs:
           for f in ${{needs.changed-gpmls.outputs.deleted}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "deleting $wpid from sandbox-wp-db"
-            git rm pathways/"$wpid"/*
-          done          
+            # FIX: a bare `git rm` exits 128 with "pathspec ... did not match any files" when
+            # the path is already gone, and the whole job dies on the first such name. That is
+            # not a rare case, it is the ordinary one: the curation portal removes the WP0001
+            # submission placeholder from the default branch itself, whenever somebody merges
+            # a pipeline pull request instead of letting it close. The commit that does the
+            # removing is the same commit this job then reacts to, so the file it is told to
+            # delete is already deleted. Observed 2026-08-13, run 31712062937, after PR #37 was
+            # merged by hand. Also `-r`, because the argument is a directory's worth of files.
+            git rm -r --ignore-unmatch pathways/"$wpid"/*
+          done
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
