@@ -48,7 +48,7 @@ jobs:
         id: checkout_db
         uses: actions/checkout@v4
         with:
-          repository: marvinm2/sandbox-wp-db
+          repository: wikipathways/sandbox-wp-db
           path: sandbox-wp-db
           ref: main
           # FIX: the push steps below run `git pull --rebase`, and a rebase on the default
@@ -61,7 +61,7 @@ jobs:
         id: checkout_jekyll
         uses: actions/checkout@v4
         with:
-          repository: marvinm2/sandbox-wp.gh.io
+          repository: wikipathways/sandbox-wp.gh.io
           path: sandbox-wp.gh.io
           ref: main
           fetch-depth: 0
@@ -82,7 +82,7 @@ jobs:
         continue-on-error: true
         uses: actions/checkout@v4
         with:
-          repository: marvinm2/sandbox-wp-assets
+          repository: wikipathways/sandbox-wp-assets
           path: sandbox-wp-assets
           ref: main
           fetch-depth: 0

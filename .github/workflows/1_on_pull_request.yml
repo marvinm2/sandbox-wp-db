@@ -1124,7 +1124,7 @@ jobs:
       # TESTING: change repo and ssh-key from sandbox to real
       uses: actions/checkout@v6
       with:
-        repository: marvinm2/sandbox-wp.gh.io
+        repository: wikipathways/sandbox-wp.gh.io
         path: wikipathways.github.io
         fetch-depth: 1
         ref: main
