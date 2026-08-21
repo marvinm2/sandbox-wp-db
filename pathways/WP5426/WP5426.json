@@ -127,6 +127,52 @@
       "xrefIdentifier": "ENSG00000169047",
       "y": 303
     },
+    "d1004": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d1004",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "PIK3CA",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000121879",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000121879",
+        "PIK3CA",
+        "Ensembl:ENSG00000121879",
+        "Entrez Gene:5290",
+        "HGNC:PIK3CA",
+        "UniProt:A0A2R8Y2F6",
+        "UniProt:C9JAM9",
+        "UniProt:A0A6Q8PGN9",
+        "UniProt:A0A6Q8PGV1",
+        "UniProt:C9J951",
+        "UniProt:P42336"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 180,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000121879",
+      "y": 423
+    },
     "publicationXrefref1": {
       "gpmlElementName": "PublicationXref",
       "id": "publicationXrefref1",
@@ -139,11 +185,11 @@
       "xrefDataSource": "PubMed",
       "xrefIdentifier": "12169433"
     },
-    "pvjsgeneratedidc1004": {
+    "pvjsgeneratedidd1005": {
       "drawAs": "StraightLine",
       "fill": "none",
       "gpmlElementName": "Interaction",
-      "id": "pvjsgeneratedidc1004",
+      "id": "pvjsgeneratedidd1005",
       "isAttachedTo": [
         "a1001",
         "b1002"
@@ -201,11 +247,11 @@
         "DirectedInteraction"
       ]
     },
-    "pvjsgeneratedidc1005": {
+    "pvjsgeneratedidd1006": {
       "drawAs": "StraightLine",
       "fill": "none",
       "gpmlElementName": "Interaction",
-      "id": "pvjsgeneratedidc1005",
+      "id": "pvjsgeneratedidd1006",
       "isAttachedTo": [
         "b1002",
         "c1003"
@@ -262,6 +308,68 @@
         "SBO:0000394",
         "DirectedInteraction"
       ]
+    },
+    "pvjsgeneratedidd1007": {
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "pvjsgeneratedidd1007",
+      "isAttachedTo": [
+        "c1003",
+        "d1004"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "Arrow",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              1
+            ]
+          },
+          "isAttachedTo": "c1003",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 240,
+          "y": 337
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              0
+            ]
+          },
+          "isAttachedTo": "d1004",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 240,
+          "y": 423
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge",
+        "SBO:0000167",
+        "SBO:0000393",
+        "SBO:0000394",
+        "DirectedInteraction"
+      ]
     }
   },
   "pathway": {
@@ -274,7 +382,7 @@
     "author": "[marvinm2]",
     "comments": [
       {
-        "content": "Second verification run for the portal cutover, exercising the automatic publish path. Insulin binds and activates the insulin receptor, which phosphorylates IRS1 and propagates the signal downstream.",
+        "content": "Second verification run for the portal cutover, exercising the automatic publish path. Insulin binds and activates the insulin receptor, which phosphorylates IRS1 and propagates the signal downstream to the PI3K catalytic subunit PIK3CA.",
         "source": "WikiPathways-description"
       }
     ],
@@ -282,28 +390,31 @@
       "a1001",
       "b1002",
       "c1003",
-      "pvjsgeneratedidc1004",
-      "pvjsgeneratedidc1005"
+      "d1004",
+      "pvjsgeneratedidd1005",
+      "pvjsgeneratedidd1006",
+      "pvjsgeneratedidd1007"
     ],
-    "dataSourceVersion": "WP5426_r20260821150449",
+    "dataSourceVersion": "WP5426_r20260821200752",
     "displayName": "Portal end-to-end check 2026-08-21",
     "drawAs": "rect",
     "fill": "white",
     "fontSize": 12,
     "fontWeight": "bold",
     "gpmlElementName": "Pathway",
-    "height": 440,
+    "height": 560,
     "id": "WP5426",
     "kaavioType": "Group",
+    "lastModified": "20260821150449",
     "name": "Portal end-to-end check 2026-08-21",
     "organism": "Homo sapiens",
     "padding": 5,
-    "pathwayVersion": "PR79",
+    "pathwayVersion": "PR82",
     "standardName": "Portal end-to-end check 2026-08-21",
     "stroke": "black",
     "strokeWidth": 0,
     "textAlign": "left",
-    "textContent": "Name: Portal end-to-end check 2026-08-21\nOrganism: Homo sapiens",
+    "textContent": "Name: Portal end-to-end check 2026-08-21\nLast Modified: 20260821150449\nOrganism: Homo sapiens",
     "type": [
       "Pathway"
     ],
