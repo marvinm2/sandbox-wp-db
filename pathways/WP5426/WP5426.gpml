@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway Data-Source="WikiPathways" Last-Modified="20260821150449" Version="WP5426_r20260821150449" xmlns="http://pathvisio.org/GPML/2013a" Name="Portal end-to-end check 2026-08-21" Author="[marvinm2]" Organism="Homo sapiens">
-  <Graphics BoardWidth="480.0" BoardHeight="440.0" />
-  <Comment Source="WikiPathways-description">Second verification run for the portal cutover, exercising the automatic publish path. Insulin binds and activates the insulin receptor, which phosphorylates IRS1 and propagates the signal downstream.</Comment>
+<Pathway Data-Source="WikiPathways" Last-Modified="20260821150449" Version="WP5426_r20260821200752" xmlns="http://pathvisio.org/GPML/2013a" Name="Portal end-to-end check 2026-08-21" Author="[marvinm2]" Organism="Homo sapiens">
+  <Graphics BoardWidth="480.0" BoardHeight="560.0" />
+  <Comment Source="WikiPathways-description">Second verification run for the portal cutover, exercising the automatic publish path. Insulin binds and activates the insulin receptor, which phosphorylates IRS1 and propagates the signal downstream to the PI3K catalytic subunit PIK3CA.</Comment>
   <BiopaxRef>ref1</BiopaxRef>
 
   <DataNode TextLabel="INS" GraphId="a1001" Type="GeneProduct">
@@ -20,6 +20,11 @@
     <Xref Database="Ensembl" ID="ENSG00000169047" />
   </DataNode>
 
+  <DataNode TextLabel="PIK3CA" GraphId="d1004" Type="GeneProduct">
+    <Graphics CenterX="240.0" CenterY="440.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000121879" />
+  </DataNode>
+
   <Interaction>
     <Graphics LineThickness="1.0">
       <Point X="240.0" Y="97.0" GraphRef="a1001" RelX="0.0" RelY="1.0" />
@@ -31,6 +36,13 @@
     <Graphics LineThickness="1.0">
       <Point X="240.0" Y="217.0" GraphRef="b1002" RelX="0.0" RelY="1.0" />
       <Point X="240.0" Y="303.0" GraphRef="c1003" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </Interaction>
+
+  <Interaction>
+    <Graphics LineThickness="1.0">
+      <Point X="240.0" Y="337.0" GraphRef="c1003" RelX="0.0" RelY="1.0" />
+      <Point X="240.0" Y="423.0" GraphRef="d1004" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
   </Interaction>
 
