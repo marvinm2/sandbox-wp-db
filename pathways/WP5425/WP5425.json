@@ -127,6 +127,52 @@
       "xrefIdentifier": "ENSG00000169047",
       "y": 303
     },
+    "d1004": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d1004",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "AKT1",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000142208",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000142208",
+        "AKT1",
+        "Ensembl:ENSG00000142208",
+        "Entrez Gene:207",
+        "HGNC:AKT1",
+        "UniProt:G3V3X1",
+        "UniProt:P31749",
+        "UniProt:G3V2I6",
+        "UniProt:A0A804HJM6",
+        "UniProt:B0LPE5",
+        "UniProt:A0A087WY56"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 180,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000142208",
+      "y": 423
+    },
     "publicationXrefref1": {
       "gpmlElementName": "PublicationXref",
       "id": "publicationXrefref1",
@@ -139,11 +185,73 @@
       "xrefDataSource": "PubMed",
       "xrefIdentifier": "12169433"
     },
-    "pvjsgeneratedidc1004": {
+    "pvjsgeneratedidd1005": {
       "drawAs": "StraightLine",
       "fill": "none",
       "gpmlElementName": "Interaction",
-      "id": "pvjsgeneratedidc1004",
+      "id": "pvjsgeneratedidd1005",
+      "isAttachedTo": [
+        "c1003",
+        "d1004"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "Arrow",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              1
+            ]
+          },
+          "isAttachedTo": "c1003",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 240,
+          "y": 337
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              0
+            ]
+          },
+          "isAttachedTo": "d1004",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 240,
+          "y": 423
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge",
+        "SBO:0000167",
+        "SBO:0000393",
+        "SBO:0000394",
+        "DirectedInteraction"
+      ]
+    },
+    "pvjsgeneratedidd1006": {
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "pvjsgeneratedidd1006",
       "isAttachedTo": [
         "a1001",
         "b1002"
@@ -201,11 +309,11 @@
         "DirectedInteraction"
       ]
     },
-    "pvjsgeneratedidc1005": {
+    "pvjsgeneratedidd1007": {
       "drawAs": "StraightLine",
       "fill": "none",
       "gpmlElementName": "Interaction",
-      "id": "pvjsgeneratedidc1005",
+      "id": "pvjsgeneratedidd1007",
       "isAttachedTo": [
         "b1002",
         "c1003"
@@ -282,10 +390,12 @@
       "a1001",
       "b1002",
       "c1003",
-      "pvjsgeneratedidc1004",
-      "pvjsgeneratedidc1005"
+      "d1004",
+      "pvjsgeneratedidd1005",
+      "pvjsgeneratedidd1006",
+      "pvjsgeneratedidd1007"
     ],
-    "dataSourceVersion": "WP5425_r20260821133253",
+    "dataSourceVersion": "WP5425_r20260821151230",
     "displayName": "Org cutover verification 2026-08-21",
     "drawAs": "rect",
     "fill": "white",
@@ -295,15 +405,16 @@
     "height": 440,
     "id": "WP5425",
     "kaavioType": "Group",
+    "lastModified": "20260821133253",
     "name": "Org cutover verification 2026-08-21",
     "organism": "Homo sapiens",
     "padding": 5,
-    "pathwayVersion": "PR78",
+    "pathwayVersion": "PR80",
     "standardName": "Org cutover verification 2026-08-21",
     "stroke": "black",
     "strokeWidth": 0,
     "textAlign": "left",
-    "textContent": "Name: Org cutover verification 2026-08-21\nOrganism: Homo sapiens",
+    "textContent": "Name: Org cutover verification 2026-08-21\nLast Modified: 20260821133253\nOrganism: Homo sapiens",
     "type": [
       "Pathway"
     ],
